@@ -10,7 +10,7 @@ nota = float(input("Ingrese su nota: "))
 if nota >= 6:
   print("Aprobado")
 else:
-  print("Desprobado")
+  print("Desaprobado")
 
 #Ejercicio 3
 numero = float(input("Ingrese un número: "))
