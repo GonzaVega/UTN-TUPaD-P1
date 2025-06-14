@@ -138,3 +138,71 @@ mi_lista.agregar_item(1)
 mi_lista.agregar_item(2)
 mi_lista.agregar_item(3)
 mi_lista.mostrar()
+
+# # Hasta aquí se desarrollo la primera solución a versión inicial del tema, luego hubo cambios en la cursada y se generó un nuevo trabajo práctico, aquí esta la resolución:
+
+#Ejercicio 1
+precios_frutas = {'Banana': 1200, 'Ananá': 2500, 'Melón': 3000, 'Uva': 1450}
+
+precios_frutas['Naranja'] = 1200
+precios_frutas['Manzana'] = 1500
+precios_frutas['Pera'] = 2300
+
+print(precios_frutas)
+
+#Ejercicio 2
+precios_frutas['Banana'] = 1330
+precios_frutas['Manzana'] = 1700
+precios_frutas['Melón'] = 2800
+
+print(precios_frutas)
+
+#Ejercicio 3
+lista_frutas = [precios_frutas.keys()]
+
+print(lista_frutas)
+
+#Ejercicio 4
+
+agenda = {}
+
+for i in range(5):
+  nombre = input(f"Ingrese el nombre de su contacto (Contacto {i + 1}/5): ")
+  telefono = int(input("Ingrese el teléfono de su contacto: "))
+  agenda[f'{nombre}'] = telefono
+
+print(agenda)
+
+def consulta_agenda(nombre):
+  if nombre in agenda.keys():
+    return f"{nombre}, está en su agenda, su teléfono es: {agenda[f'{nombre}']}"
+  else:
+    return "Esa persona no está en su agenda"
+  
+busca_contacto = input("Ingrese un nombre para buscarlo en su agenda: ")
+
+print(consulta_agenda(busca_contacto))
+
+#Ejercicio 5
+
+frase = input("Ingresa una frase: ")
+
+palabras_unicas = set(frase.lower().split())
+
+print(palabras_unicas)
+
+def cuenta_palabras(frase):
+  frase_array = frase.lower().split()
+  frase_lista = {}
+  for palabra in frase_array:
+    if palabra in frase_lista:
+      frase_lista[f'{palabra}'] = frase_lista[f'{palabra}'] + 1
+    else:
+      frase_lista[f'{palabra}'] = 1
+      
+  return frase_lista
+
+print(cuenta_palabras(frase))
+
+#Ejercicio 6
+
